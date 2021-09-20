@@ -1,0 +1,154 @@
+/* - Mobile: 375px
+- Desktop: 1440px
+ Weights: 300, 400, 600
+  */
+:root{
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+    --DesaturatedRed: hsl(0, 36%, 70%);
+    --SoftRed: hsl(0, 93%, 68%);
+    --background1: rgb(255,255,255);
+    --background2: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,245,245,1) 0%);
+    --background3: hsl(0, 80%, 86%);
+    --background4: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+body{
+font-size: 16px;
+color: var(--DesaturatedRed);
+margin: 0;
+background: url(./images/bg-pattern-desktop.svg);
+}
+/* flex container */
+.flex{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* laprop/pc girl img */
+.flex-background-img{
+    max-width: 100%;
+    height: auto;
+}
+.flex-background-img img{
+    display: block;
+}
+.flex-1{
+    padding: 2rem 7rem;
+}
+/* logo h1 and p */
+.logo{
+padding: 2rem 0 5rem 0;
+}
+.heading{
+    font-size: 4.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 15px;
+    color: rgba(0, 0, 0, 0.795);
+}
+.heading-span{
+    font-weight: 300;
+    color: var(--DesaturatedRed);
+}
+.text{
+    font-size: 1rem;
+    padding-right: 6rem;
+    color: var(--DesaturatedRed);
+    line-height: 25px;
+    margin-bottom: 3rem;
+}
+/* form section */
+#myForm{
+    position: relative;
+}
+#email{
+ width: 25rem;
+ padding: 1.3rem 1rem;
+ border-radius: 100px;
+ border: 1px solid var(--DesaturatedRed);
+outline: none;
+}
+#email::placeholder{
+    font-size: 1rem;
+}
+#btn{
+    border: none;
+    padding: 1rem 2.6rem;
+    border-radius: 50px;
+    position: absolute;
+    top: 1%;
+    left: 59%;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    cursor: pointer;
+    box-shadow:0 1rem 1rem hsl(0deg 93% 68% / 30%);
+
+}
+#btn:hover{
+    background:linear-gradient(
+        135deg, hsl(0, 0%, 100%), hsl(0, 80%, 86%)); 
+        box-shadow: 0 1rem 3rem hsl(0deg 93% 68% / 80%);
+}
+#error{
+    visibility: hidden;
+    color: red;
+    padding: 10px 20px;
+}
+#error-svg{
+    visibility: hidden;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+}
+/* mobile girl img  */
+.mobile-bacground{
+  min-width: 375px;
+  display: none;
+}
+/* media queries */
+@media all and (max-width:1000px){
+    .flex{
+        flex-direction: column;
+       
+    }
+    .flex-background-img{
+        display: none;
+    }
+    .mobile-bacground{
+        display: flex;
+          
+     }
+     .mobile-bacground img{
+        width: 1000px; 
+     }
+     .flex-1{
+         padding: 0;
+         /* text-align: center; */
+     }
+     .logo{
+         padding: 2rem 3rem;
+     }
+     .heading{
+         font-size: 2.5rem;
+         text-align: center;
+     }
+     .text{
+         padding: 0 2rem;
+         text-align: center;
+     }
+     #myForm{
+         text-align: center;
+         padding-bottom: 3rem;
+     }
+     #btn{
+         left: 65%;
+     }
+     #email{
+         width: 17rem;
+     }
+     #error-svg{
+         top: 12%;
+         left: 55%;
+     }
+}

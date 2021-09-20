@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="flex">
+      <div class="flex-background-img">
+        <img src="./images/hero-desktop.jpg" alt="">
+      </div>
+      <div class="flex-1">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="mobile-bacground">
+          <img src="./images/hero-mobile.jpg" alt="">
+        </div>
+        <h1 class="heading"> <span class="heading-span">We're</span> coming soon</h1>
+        <p class="text">Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+       <form action="" id="myForm">
+        <input type="email" name="uEmail" id="email" placeholder="Email Address" required>
+        <button id="btn"><img src="./images/icon-arrow.svg" alt=""></button>
+        <div id="error-svg"><img src="./images/icon-error.svg" alt=""></div>
+        <div id="error">Email is Not valid or empty</div>
+       </form>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
